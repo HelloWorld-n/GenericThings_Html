@@ -11,13 +11,17 @@ print(f"""
 		<title>Document</title>
 	</head>
 	<style>
+		html {{
+			color: #AAAAEE;
+		}}
+
 		html\:h1 {{
 			font-size: 60px;
 			text-decoration-skip-ink: none;
 			text-decoration: underline dotted #0D0D14 4px;
 		}}
 	</style>
-	<html:body>
+	<html:body onload="Main.main()">
 		Hello, world!
 		<h1>
 			Hello, world! {{namespace: None}}
@@ -26,6 +30,14 @@ print(f"""
 			Hello, world! {{namespace: "html"}}
 		</html:h1>
 		<script src="js/main.js"></script>
+		<script>
+			class Main{{
+				static main(){{
+					console.log("Hi!")
+					alert(new Date().toISOString())
+				}}
+			}}
+		</script>
 	</html:body>
 
 	</html>
