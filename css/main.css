@@ -65,6 +65,11 @@ button {
 	src: url(../fonts/3270.ttf);
 }
 
+@font-face {
+	font-family: "Cascadia";
+	src: url(../fonts/CascadiaMono.ttf);
+}
+
 * {
 	font-family: var(--font-main);
 }
