@@ -1,11 +1,10 @@
-
 $bg: #272822
 $fg: #F8F8F2
 $bg-plus: #373832
 $bg-key: #141511
 $table-align: 2px
-$font-main: "IBM 3270", "HackMono", "Hack", "Ubuntu Mono", "Consolas", "Monospace"
-$font-monospace: "IBM 3270", "HackMono", "Hack", "Ubuntu Mono", "Consolas", "Monospace"
+$font-main: "CascadiaMono", "IBM 3270", "HackMono", "Hack", "Ubuntu Mono", "Consolas", "Monospace"
+$font-monospace: "CascadiaCode", "IBM 3270", "HackMono", "Hack", "Ubuntu Mono", "Consolas", "Monospace"
 $red: #F92672
 $orange: #FD971F
 $orangish: #E69F66
@@ -38,6 +37,14 @@ textarea, input
 
 input[type="button"], input[type="submit"], button
 	background-color: $bg-key
+
+@font-face
+	font-family: "CascadiaMono"
+	src: url(../fonts/CascadiaMono.ttf)
+
+@font-face
+	font-family: "CascadiaCode"
+	src: url(../fonts/CascadiaCode.ttf)
 
 @font-face
 	font-family: "Recursive"
