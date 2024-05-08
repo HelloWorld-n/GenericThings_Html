@@ -21,7 +21,7 @@ def cleanDatabaseTable(cursor, tableName, ids = None):
 		""")
 		cursor.execute(f"ALTER TABLE temp_{tableName} DROP COLUMN {item}")
 		cursor.execute(f"ALTER TABLE temp_{tableName} RENAME COLUMN temp_{item} TO {item}")
-	if ids == None:
+	if ids is None:
 		cursor.execute(
 			f"SELECT * FROM temp_{tableName}", 
 			[]
@@ -34,7 +34,7 @@ def cleanDatabaseTable(cursor, tableName, ids = None):
 	elif isinstance(ids, Iterable):
 		cursor.execute(
 			f"SELECT * FROM temp_{tableName} WHERE id=%s",
-			[ids]
+			ids
 		)
 	else:
 		raise KeyError(f"Arg `ids` type excepted in [NoneType, int, ∈collections.abs.Iterable], got {type(ids)}")
